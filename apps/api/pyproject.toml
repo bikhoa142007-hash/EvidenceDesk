@@ -1,0 +1,22 @@
+[project]
+
+name = "evidencedesk"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = ["fastapi", "uvicorn[standard]"]
+
+[dependency-groups]
+
+dev = ["pytest", "httpx", "ruff", "pyright"]
+
+[build-system]
+
+requires = ["hatchling"]
+build-backed = "hatchling.build"
+
+[tool.pytest.ini_options]
+
+testpaths = ["test"]
+
+[tool.uv.extra-build-dependencies]
+evidencedesk = ["setuptools"]
